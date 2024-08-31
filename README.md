@@ -54,7 +54,7 @@ export default App;
 
 
 ```
-
+The post is json object as :- {gMap : 'link' }
 ## API
 useLocation(sendUrl: string)
 Parameters:

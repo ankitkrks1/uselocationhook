@@ -1,6 +1,6 @@
 {
   "name": "uselocationhook",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This hook captures the location data once the user grants permission",
   "funding": [
     {
@@ -27,7 +27,10 @@
     "track",
     "location"
   ],
-  "author": "Ankit K Kashyap",
+  "author": {
+    "name": "Ankit K Kashyap",
+    "email": "kr.ks.ankit@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "react": "^18.3.1"
