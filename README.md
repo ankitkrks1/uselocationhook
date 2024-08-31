@@ -2,48 +2,67 @@
 
 [![NPM](https://nodei.co/npm/uselocationhook.png)](https://nodei.co/npm/uselocationhook/)
 
-# What is this all about?
+# `uselocationhook` - React Hook for Client Location
 
-This is a react hook for fetching the client's location and then gives the coordinates
-It also has capability to send to backend server . 
+`uselocationhook` is a custom React hook designed to fetch the client's location and return the coordinates. Additionally, it can send the location data to a backend server.
 
-/**
- * @author Ankit K Kashyap
- * @description This hook captures the location data once the user grants permission
- * and then sends the Google Maps link to the provided `sendUrl`. It also returns
- * the location object.
- *
- * @param sendUrl
- *  The backend link where the data needs to be sent using a POST request.
- *  The data is sent as a JSON object: { gMap: link to Google Maps }.
- *
- * @returns The location object containing { latitude, longitude, accuracy }.
- *
- */
+## Features
 
+- **Fetch Client Location**: Retrieves the latitude, longitude, and accuracy of the client's location.
+- **Send Location Data**: Sends a Google Maps link containing the location coordinates to a specified backend URL.
+- **TypeScript Support**: Provides type definitions for seamless integration into TypeScript projects.
 
-# Examples :- 
+## Installation
+
+To install `uselocationhook`, use npm or yarn:
+
+```bash
+npm install uselocationhook
+
+or 
+yarn add uselocationhook
+
+```
+
+## Usage 
+``` bash
+import React from "react";
 import useLocation from "uselocationhook";
-
 import "./App.css";
+
 const url = "http://localhost:3001/location";
-function App() {
+
+const App: React.FC = () => {
   const location = useLocation(url);
+
   return (
     <div className="App">
-      {location && (
+      {location ? (
         <>
-          <p>Lattitude : {location.latitude} </p>{" "}
-          <p>Longitude : {location.longitude}</p>
+          <p>Latitude: {location.latitude}</p>
+          <p>Longitude: {location.longitude}</p>
+          <p>Accuracy: {location.accuracy} meters</p>
         </>
+      ) : (
+        <p>Fetching location...</p>
       )}
     </div>
   );
-}
+};
 
 export default App;
 
 
+```
+
+## API
+useLocation(sendUrl: string)
+Parameters:
+
+sendUrl (string): The backend URL where the location data will be sent via a POST request. The data sent will include a Google Maps link to the location.
+Returns:
+
+An object containing { latitude, longitude, accuracy } or undefined if the location is not yet available.
 
 Buy me a Dosha :
 
