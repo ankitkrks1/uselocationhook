@@ -53,7 +53,7 @@ const useLocation = (sendUrl: string):Ilocation|undefined => {
               return response.json();
             })
             .then((jsonResponse) => {
-              console.log("Response from server:", jsonResponse);
+              console.log("Response from server:", 'ok');
             })
             .catch((error) => {
               console.error("Error:", error);
