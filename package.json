@@ -1,0 +1,38 @@
+{
+  "name": "uselocationhook",
+  "version": "1.0.2",
+  "description": "This hook captures the location data once the user grants permission",
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/sharemydisk"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ankitkrks1"
+    }
+  ],
+  "bin": {
+    "useLocation": "dist/index.js"
+  },
+  "main": "lib/useLocation.js",
+  "types": "lib/useLocation.d.ts",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "to",
+    "track",
+    "location"
+  ],
+  "author": "Ankit K Kashyap",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
