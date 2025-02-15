@@ -3,7 +3,7 @@
  * @description This hook captures the location data once the user grants permission
  * and then sends the Google Maps link to the provided `sendUrl`. It also returns
  * the location object.
- *
+ * If user don't grant permission then it will use the IP address to get the location.
  * @param sendUrl
  *  The backend link where the data needs to be sent using a POST request.
  *  The data is sent as a JSON object: { gMap: link to Google Maps }.
